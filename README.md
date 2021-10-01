@@ -6,6 +6,8 @@ This is an example React application created during Algebra's Frontend developer
 
 > This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f94f0fe5-45b9-4bce-b640-abc016d745e4/deploy-status)](https://app.netlify.com/sites/algebra-react-example-app/deploys)
+
 ## Available Scripts
 
 In the project directory, you can run:
