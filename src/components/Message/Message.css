@@ -1,0 +1,36 @@
+.Message {
+  background: #33ccff;
+  box-sizing: border-box;
+  padding: 16px;
+  text-align: left;
+  border-radius: 10px;
+}
+
+.Message.Message--important {
+  background: #ffcc33;
+}
+
+.Message .Message__title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.Message .Message__author {
+  font-size: 1rem;
+  font-style: italic;
+  margin-bottom: 4px;
+}
+
+.Message .Message__id {
+  font-size: 0.8rem;
+  margin-bottom: 16px;
+}
+
+.Message .Message__text {
+  margin-bottom: 16px;
+}
+
+.Message .Message__date {
+  font-size: 0.8rem;
+}
