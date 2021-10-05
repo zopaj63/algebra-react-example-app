@@ -58,4 +58,15 @@ function App() {
   );
 }
 
-export default App;
+function withSmile(Component) {
+  return function () {
+    return (
+      <div>
+        <Component />
+        <div>:)</div>
+      </div>
+    );
+  }
+}
+
+export default withSmile(App);
