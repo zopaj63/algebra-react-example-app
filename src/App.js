@@ -5,6 +5,7 @@ import { getId } from "./helpers";
 import AppContext from "./contexts/AppContext";
 import ChatContext from "./contexts/AppContext/ChatContext";
 import MessageList from "./containers/MessageList";
+import AppRouter from "./pages/AppRouter";
 
 const menus = ["jen", "dva", "tri", "četri"];
 const menuElements = menus.map(menu =>
@@ -21,6 +22,7 @@ function App() {
 
   return (
     <ChatContext.Provider value={messageObjects}>
+      <AppRouter />
       <div className="App">
         {menuElements.map((menuElement) =>
           <button key={menuElement.key}>
