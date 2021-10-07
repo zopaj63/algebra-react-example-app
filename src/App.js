@@ -1,11 +1,10 @@
 import "./App.css";
-import MessageForm from "./components/MessageForm";
+import MessageForm from "./containers/MessageForm";
 import { useContext, useState } from "react";
-import Message from "./components/Message";
 import { getId } from "./helpers";
 import AppContext from "./contexts/AppContext";
 import ChatContext from "./contexts/AppContext/ChatContext";
-import MessageList from "./components/MessageList";
+import MessageList from "./containers/MessageList";
 
 const menus = ["jen", "dva", "tri", "četri"];
 const menuElements = menus.map(menu =>
