@@ -14,10 +14,27 @@ export default function Message({ isImportant, message, title }) {
   return (
     <div className={className}>
       <div className="Message__title">{title}</div>
+      <div className="Message__text">{message}</div>
       <div className="Message__author"><UserInfo /></div>
       <div className="Message__id"><UniqueId /></div>
-      <div className="Message__text">{message}</div>
       <div className="Message__date"><CurrentDate /></div>
     </div>
   );
 }
+
+function withUserInfo(Component) {
+  return function (props) 
+  { return <Component {...props} />; };
+}
+
+function withUniqueId(Component) {
+  return function (props) 
+  { return <Component {...props} />; };
+}
+
+function withCurrentDate(Component) {
+  return function (props) 
+  { return <Component {...props} />; };
+}
+
+export const MessageWithHoc = withUserInfo(withUniqueId(withCurrentDate(Message)));
