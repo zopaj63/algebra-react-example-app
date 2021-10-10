@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import ChatContext from "../../contexts/AppContext/ChatContext";
+import ChatContext from "../../contexts/ChatContext";
 import Message from "../../components/Message";
 
 export default function MessageList() {

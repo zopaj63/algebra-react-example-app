@@ -12,7 +12,9 @@ export default function AppRouter() {
             <Switch>
                 <Route exact path="/" component={SignInPage} />
                 <Route path="/chat" component={ChatPage} />
-                <Route path="*"><Redirect to="/" /></Route>
+                <Route path="*">
+                    <Redirect to="/" />
+                </Route>
             </Switch>
         </div>
     )

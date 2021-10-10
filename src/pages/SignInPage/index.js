@@ -1,11 +1,19 @@
-import { Link } from "react-router-dom";
+import SignInForm from "../../containers/SignInForm";
+import "./SignInPage.css";
 
 export default function SignInPage() {
-    return (
-        <div>
-            <h1>Sign in</h1>
-            <br />
-            <p>... or go to <Link to="chat">chat</Link> :)</p>
-        </div>
-    );
+  const handleSignIn = (state) => {
+    console.log('handleSignIn', state);
+  }
+
+  return (
+    <div className="SignInPage">
+      <div className="SignInPage__title">
+        <h1>Sign in</h1>
+      </div>
+      <div className="SignInPage__form">
+        <SignInForm onSignIn={handleSignIn} />
+      </div>
+    </div>
+  );
 }
