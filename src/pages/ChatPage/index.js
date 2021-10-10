@@ -28,7 +28,7 @@ export default function ChatPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    MyApp GitHub Profile
+                    MyApp GitHub Repository
                 </a>
             </footer>
         </div>
