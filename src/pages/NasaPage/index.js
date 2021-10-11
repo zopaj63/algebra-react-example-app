@@ -1,23 +1,6 @@
 import { useEffect, useState } from "react";
-
-function NasaVideo({ title, url, explanation }) {
-    return (
-        <div className="NasaVideo">
-            <iframe width="640" height="480" src={url} title={title} />
-            <div>{title}</div>
-            <div>{explanation}</div>
-        </div>
-    );
-}
-
-function NasaImage({ title, url, explanation }) {
-    return (
-        <figure className="NasaImage">
-            <img src={url} alt={title} />
-            <figcaption>{explanation}</figcaption>
-        </figure>
-    );
-}
+import NasaImage from "../../components/NasaImage";
+import NasaVideo from "../../components/NasaVideo";
 
 export default function NasaPage() {
     const [state, setState] = useState(null);
