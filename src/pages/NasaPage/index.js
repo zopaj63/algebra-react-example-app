@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import NasaImage from "../../components/NasaImage";
 import NasaVideo from "../../components/NasaVideo";
+import "./NasaPage.css";
 
 export default function NasaPage() {
     const [state, setState] = useState(null);

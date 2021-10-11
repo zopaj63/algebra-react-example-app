@@ -1,3 +1,5 @@
+import "./NasaVideo.css";
+
 export default function NasaVideo({ title, url, explanation }) {
     return (
         <div className="NasaVideo">
