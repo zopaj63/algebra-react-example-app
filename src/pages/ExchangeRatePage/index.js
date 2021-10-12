@@ -11,6 +11,7 @@ function ExchangeRates({ currency, limit }) {
     rates(currency: "${currency}") {
       currency
       rate
+      name
     }
   }
   `));
@@ -24,7 +25,7 @@ function ExchangeRates({ currency, limit }) {
             <ul>
                 {data.rates.slice(0, limit).map((item) =>
                     <li key={item.currency}>
-                        {item.currency}: {item.rate}
+                        {item.currency}: {item.rate}: {item.name}
                     </li>
                 )}
             </ul>
