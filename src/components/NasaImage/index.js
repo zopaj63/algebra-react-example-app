@@ -1,3 +1,5 @@
+import "./NasaImage.css";
+
 export default function NasaImage({ title, url, explanation }) {
     return (
         <figure className="NasaImage">

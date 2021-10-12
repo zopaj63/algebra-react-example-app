@@ -39,7 +39,8 @@ export default function ExchangeRatePage() {
             <div className="ExchangeRatePage">
                 <h1>Exchange Rate</h1>
                 <ExchangeRates currency="EUR" limit={10} />
-                <ExchangeRates currency="HRK" limit={5} />
+                <ExchangeRates currency="HRK" limit={15} />
+                <ExchangeRates currency="USD" limit={5} />
             </div>
         </ApolloProvider>
     );
