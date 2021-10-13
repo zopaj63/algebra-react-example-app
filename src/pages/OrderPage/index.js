@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { createStore } from 'redux';
 import { Provider, useDispatch, useSelector } from 'react-redux';
 import reducer, { addOrderItem } from '../../reducers/OrderReducer';
@@ -5,21 +6,36 @@ import reducer, { addOrderItem } from '../../reducers/OrderReducer';
 const orderStore = createStore(reducer);
 
 function OrderForm() {
-    const state = useSelector((state) => state);
+    const [state, setState] = useState({ text: "" });
     const dispatch = useDispatch();
+
+    const handleOnChange = (event) => {
+        setState({ text: event.target.value });
+    }
 
     const handleOnSubmit = (event) => {
         event.preventDefault();
-        dispatch(addOrderItem({ text: "Hrana" }));
+        dispatch(addOrderItem(state));
     }
-
-    console.log(state);
 
     return (
         <form onSubmit={handleOnSubmit}>
-            <input value="Hrana" /><button>Add order</button>
+            <input value={state.text} onChange={handleOnChange} />
+            <button>Add order</button>
         </form>
     );
+}
+
+function OrderList() {
+    const state = useSelector((state) => state);
+
+    return (
+        <div>
+            {state.map((item, index) =>
+                <div key={index}>{item.text}</div>
+            )}
+        </div>
+    )
 }
 
 export default function OrderPage() {
@@ -28,6 +44,7 @@ export default function OrderPage() {
             <div className="OrderPage">
                 <h1>Order food</h1>
                 <OrderForm />
+                <OrderList />
             </div>
         </Provider>
     )
