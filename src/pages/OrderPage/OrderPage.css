@@ -1,0 +1,12 @@
+.order-page{
+    background-color:cornsilk;
+    padding: 10px;
+}
+
+.order-page button{
+    display: block;
+    text-align: center;
+    padding: 8px;
+    margin: 18px;
+    background-color:goldenrod;
+}

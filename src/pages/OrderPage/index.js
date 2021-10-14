@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { createStore } from 'redux';
 import { Provider, useDispatch, useSelector } from 'react-redux';
-import reducer, { addOrderItem } from '../../reducers/OrderReducer';
+import reducer, { addOrderItem, deleteAllOrderItems } from '../../reducers/OrderReducer';
+import "./OrderPage.css";
 
 const orderStore = createStore(reducer);
 
@@ -18,11 +19,22 @@ function OrderForm() {
         dispatch(addOrderItem(state));
     }
 
+    const handleOnDeleteAll = (event) => {
+        event.preventDefault();
+        dispatch(deleteAllOrderItems());
+    }
+
     return (
-        <form onSubmit={handleOnSubmit}>
-            <input value={state.text} onChange={handleOnChange} />
-            <button>Add order</button>
-        </form>
+        <div className="order-page">
+            <form onSubmit={handleOnSubmit}>
+                <input value={state.text} onChange={handleOnChange} />
+                <button>Add order</button>
+            </form>
+            <form onSubmit={handleOnDeleteAll}>
+                <button>Delete orders</button>
+            </form>
+            <p>Orders:</p>
+        </div>
     );
 }
 
