@@ -1,0 +1,10 @@
+.app-router li{
+    display: inline-flex;
+    background-color: blanchedalmond;
+    padding: 8px;
+    margin: 12px;
+    border-radius: 6px;
+    border: 1px solid olivedrab;
+    box-shadow: 2px 2px 8px slategray;
+
+}

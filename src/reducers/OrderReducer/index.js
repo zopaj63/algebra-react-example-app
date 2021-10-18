@@ -9,8 +9,8 @@ export function addOrderItem(item) {
     return { type: type.ADD_ORDER_ITEM, item };
 }
 
-export function deleteAllOrderItems(response) {
-    return { type: type.DELETE_ALL_ORDER_ITEMS, response }
+export function deleteAllOrderItems() {
+    return { type: type.DELETE_ALL_ORDER_ITEMS }
 }
 
 export default function reducer(state = initialState, action) {

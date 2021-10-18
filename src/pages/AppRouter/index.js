@@ -4,10 +4,11 @@ import ChatPage from "../ChatPage";
 import NasaPage from "../NasaPage";
 import ExchangeRatePage from "../ExchangeRatePage";
 import OrderPage from "../OrderPage";
+import "./AppRouter.css";
 
 export default function AppRouter() {
     return (
-        <div>
+        <div className="app-router">
             <ul>
                 <li><NavLink exact to="/">Index</NavLink></li>
                 <li><NavLink to="/chat">Chat</NavLink></li>
